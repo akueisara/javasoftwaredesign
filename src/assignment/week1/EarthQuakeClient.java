@@ -139,10 +139,13 @@ public class EarthQuakeClient {
 	public void quakesOfDepth(){
 		EarthQuakeParser parser = new EarthQuakeParser();
 		// String source = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
-		String source = "data/nov20quakedatasmall.atom";
+//		String source = "data/nov20quakedatasmall.atom";
+		String source = "data/nov20quakedata.atom";
 		ArrayList<QuakeEntry> list  = parser.read(source);
 		System.out.println("read data for "+list.size()+" quakes");
-		double minDepth = -10000.0;
+//		double minDepth = -10000.0;
+//		double maxDepth = -5000.0;
+		double minDepth = -8000.0;
 		double maxDepth = -5000.0;
 		System.out.println("Find quakes with depth between " + minDepth + " and " + maxDepth);
 
@@ -157,15 +160,18 @@ public class EarthQuakeClient {
 	public void quakesByPhrase(){
 		EarthQuakeParser parser = new EarthQuakeParser();
 		// String source = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
-		String source = "data/nov20quakedatasmall.atom";
+//		String source = "data/nov20quakedatasmall.atom";
+		String source = "data/nov20quakedata.atom";
 		ArrayList<QuakeEntry> list  = parser.read(source);
 		System.out.println("read data for "+list.size()+" quakes");
 //		String indicator = "end";
 //		String phrase = "California";
 //		String indicator = "any";
 //		String phrase = "Can";		
-		String indicator = "start";
-		String phrase = "Explosion";
+//		String indicator = "start";
+//		String phrase = "Explosion";
+		String indicator = "any";
+		String phrase = "Creek";
 		ArrayList<QuakeEntry> listCalfornia = filterByPhrase(list, indicator , phrase);
 		for (QuakeEntry qe :  listCalfornia) {
 			System.out.println(qe);
