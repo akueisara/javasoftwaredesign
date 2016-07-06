@@ -1,7 +1,10 @@
 package assignment.week1;
 
 /**
- * Assignment: Filtering by Magnitude and Distance / Filtering by Depth
+ * Assignment
+ * Filtering by Magnitude and Distance
+ * Filtering by Depth
+ * Filtering by Phrase in Title
  * 
  * @version July 3, 2016
  */
@@ -54,16 +57,29 @@ public class EarthQuakeClient {
 			String indicator, String phrase){
 		ArrayList<QuakeEntry> answer = new ArrayList<QuakeEntry>();
 		
-		if(indicator == "start") {
+		if(indicator.equals("start")) {
+			for (QuakeEntry qe: quakeData) {
+				if (qe.getInfo().startsWith(phrase)) {
+					answer.add(qe);
+				}
+			}
+		}
+		else if (indicator.equals("any")) {
+			for (QuakeEntry qe: quakeData) {
+				if (qe.getInfo().contains(phrase)) {
+					answer.add(qe);
+				}
+			}
 			
 		}
-		else if (indicator == "any") {
+		else if (indicator.equals("end")) {
+			for (QuakeEntry qe: quakeData) {
+				if (qe.getInfo().endsWith(phrase)) {
+					answer.add(qe);
+				}
+			}
 			
 		}
-		else if (indicator == "end") {
-			
-		}
-		
 		return answer;
 	}
 
@@ -136,6 +152,27 @@ public class EarthQuakeClient {
 		}
 
 		System.out.println("Found " + listDeep.size() + " quakes that match that criteria\n");
+	}
+	
+	public void quakesByPhrase(){
+		EarthQuakeParser parser = new EarthQuakeParser();
+		// String source = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
+		String source = "data/nov20quakedatasmall.atom";
+		ArrayList<QuakeEntry> list  = parser.read(source);
+		System.out.println("read data for "+list.size()+" quakes");
+//		String indicator = "end";
+//		String phrase = "California";
+//		String indicator = "any";
+//		String phrase = "Can";		
+		String indicator = "start";
+		String phrase = "Explosion";
+		ArrayList<QuakeEntry> listCalfornia = filterByPhrase(list, indicator , phrase);
+		for (QuakeEntry qe :  listCalfornia) {
+			System.out.println(qe);
+		}
+
+		System.out.println("Found " +  listCalfornia.size() + " quakes that match " + phrase  + " at " + indicator + "\n");
+		
 	}
 
 	public void createCSV(){

@@ -1,7 +1,10 @@
 package assignment.week1;
 
 /**
- * Assignment: Filtering by Magnitude and Distance / Filtering by Depth
+ * Assignment
+ * Filtering by Magnitude and Distance
+ * Filtering by Depth
+ * Filtering by Phrase in Title
  * 
  * @version July 3, 2016
  */
@@ -26,18 +29,23 @@ public class EarthQuakeClientTest {
 	}
 	
 	@Test
-	public void bigQuakesTest() {
+	public void bigQuakesTest(){
 		ec.bigQuakes();
 	}
 
 	@Test
-	public void closeToMeTest() {
+	public void closeToMeTest(){
 		ec.closeToMe();
 	}
 	
 	@Test
-	public void quakesOfDepthTest() {
+	public void quakesOfDepthTest(){
 		ec.quakesOfDepth();
+	}
+	
+	@Test
+	public void quakesByPhraseTest(){
+		ec.quakesByPhrase();
 	}
 
 }
