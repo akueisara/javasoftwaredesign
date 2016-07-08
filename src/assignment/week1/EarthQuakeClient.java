@@ -82,7 +82,7 @@ public class EarthQuakeClient {
 		}
 		return answer;
 	}
-
+	
 	public void dumpCSV(ArrayList<QuakeEntry> list){
 		System.out.println("Latitude,Longitude,Magnitude,Info");
 		for(QuakeEntry qe : list){
