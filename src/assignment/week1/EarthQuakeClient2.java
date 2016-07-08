@@ -29,21 +29,24 @@ public class EarthQuakeClient2 {
 	public void quakesWithFilter() { 
 		EarthQuakeParser parser = new EarthQuakeParser(); 
 		//String source = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
-		String source = "data/nov20quakedatasmall.atom";
+//		String source = "data/nov20quakedatasmall.atom";
+		String source = "data/nov20quakedata.atom";
 		ArrayList<QuakeEntry> list  = parser.read(source);         
 		System.out.println("read data for "+list.size()+" quakes");
 
 		//        Filter f = new MinMagFilter(4.0); 
-		//        Filter f1 = new MagnitudeFilter(4.0, 5.0);
-		//        Filter f2 = new DepthFilter(-35000.0, -12000.0);
-		Location japan = new Location(35.42, 139.43);
-		Filter f1 = new DistanceFilter(japan, 10000000.0);
-		Filter f2 = new PhraseFilter("end", "Japan");
+		Filter f1 = new MagnitudeFilter(4.0, 5.0);
+		Filter f2 = new DepthFilter(-35000.0, -12000.0);
+//		Location japan = new Location(35.42, 139.43);
+//		Filter f1 = new DistanceFilter(japan, 10000000.0);
+//		Filter f2 = new PhraseFilter("end", "Japan");
 		ArrayList<QuakeEntry> m7  = filter(list, f1); 
 		m7 = filter(m7, f2); 
 		for (QuakeEntry qe: m7) { 
 			System.out.println(qe);
 		} 
+		
+		System.out.println("Found " + m7.size() + " quakes that match that criteria\n");
 	}
 
 	public void createCSV() {
@@ -69,23 +72,29 @@ public class EarthQuakeClient2 {
 
 	public void testMatchAllFilter(){
 		EarthQuakeParser parser = new EarthQuakeParser();
-		//String source = "../data/nov20quakedata.atom";
-		String source = "data/nov20quakedatasmall.atom";
+		String source = "data/nov20quakedata.atom";
+//		String source = "data/nov20quakedatasmall.atom";
 		//String source = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
 		ArrayList<QuakeEntry> list  = parser.read(source);
 		System.out.println("read data for "+list.size()+" quakes");
 		
-		Location Oklahoma = new Location(36.1314, -95.9372);
+		
 		MatchAllFilter maf = new MatchAllFilter();
+		Location Oklahoma = new Location(36.1314, -95.9372);
 		maf.addFilter(new MagnitudeFilter(0.0, 3.0));
 		maf.addFilter(new DistanceFilter(Oklahoma, 10000000.0));
 		maf.addFilter(new PhraseFilter("any", "Ca"));
+//		maf.addFilter(new MagnitudeFilter(0.0, 2.0));
+//		maf.addFilter(new DepthFilter( -100000.0, -10000.0));
+//		maf.addFilter(new PhraseFilter("any", "a"));
+
 		ArrayList<QuakeEntry> m7  = filter(list, maf); 
 		for (QuakeEntry qe: m7) { 
 			System.out.println(qe);
 		} 
 		
-		System.out.println("Filters used are: " + maf.getName());
+		System.out.println("Found " + m7.size() + " quakes that match that criteria");
+		System.out.println("Filters used are: " + maf.getName() + "\n");
 	}
 	
 	public void testMatchAllFilter2(){
@@ -104,6 +113,7 @@ public class EarthQuakeClient2 {
 		for (QuakeEntry qe: m7) { 
 			System.out.println(qe);
 		} 
+		System.out.println("Found " + m7.size() + " quakes that match that criteria\n");
 	}
 
 }
