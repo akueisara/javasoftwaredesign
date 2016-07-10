@@ -1,10 +1,10 @@
 package assignment.week2;
 
 /**
- * [Assignment]
- * Sort by Depth
- * Bubble Sort
- * Check for Completion
+ * Implementing Selection Sort
+ * Assignment 1: Sort by Depth
+ * Assignment 2: Bubble Sort
+ * Assignment 3: Check for Completion
  * 
  * @version July 9, 2016
  */
