@@ -9,6 +9,7 @@ package assignment.week1;
 public class MinMagFilter implements Filter
 {
     private double magMin; 
+    private String name = "MinMagFilter";
     
     public MinMagFilter(double min) { 
         magMin = min;
@@ -19,7 +20,7 @@ public class MinMagFilter implements Filter
     } 
     
     public String getName(){
-		return "MinMagFilter";
+		return name;
 	}
 
 }

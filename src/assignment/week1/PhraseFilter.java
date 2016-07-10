@@ -10,6 +10,7 @@ package assignment.week1;
 public class PhraseFilter implements Filter{
 	private String indicator;
 	private String phrase;
+	private String name = "PhraseFilter";
 
 	public PhraseFilter(String i, String p) { 
 		indicator = i;
@@ -31,6 +32,6 @@ public class PhraseFilter implements Filter{
 	
 	
 	public String getName(){
-		return "PhraseFilter";
+		return name;
 	}
 }

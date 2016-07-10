@@ -10,6 +10,7 @@ package assignment.week1;
 public class MagnitudeFilter implements Filter {
 	private double magMin;
 	private double magMax;
+	private String name = "MagnitudeFilter";
 	
 	public MagnitudeFilter(double min, double max) { 
 		magMin = min;
@@ -21,6 +22,6 @@ public class MagnitudeFilter implements Filter {
     } 
 	
 	public String getName(){
-		return "MagnitudeFilter";
+		return name;
 	}
 }

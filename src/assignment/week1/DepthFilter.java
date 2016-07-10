@@ -3,6 +3,7 @@ package assignment.week1;
 public class DepthFilter implements Filter {
 	private double min;
 	private double max;
+	private String name = "DepthFilter";
 	
 	public DepthFilter(double minDepth, double maxDepth){
 		min = minDepth;
@@ -13,6 +14,6 @@ public class DepthFilter implements Filter {
 	}
 	
 	public String getName(){
-		return "DepthFilter";
+		return name;
 	}
 }

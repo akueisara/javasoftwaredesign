@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class MatchAllFilter implements Filter {
 	private ArrayList<Filter> filters;
+	
 	public MatchAllFilter() {
 		filters = new ArrayList<Filter>();
 	}
