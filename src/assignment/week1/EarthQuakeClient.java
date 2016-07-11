@@ -145,8 +145,12 @@ public class EarthQuakeClient {
 		System.out.println("read data for "+list.size()+" quakes");
 //		double minDepth = -10000.0;
 //		double maxDepth = -5000.0;
-		double minDepth = -8000.0;
-		double maxDepth = -5000.0;
+//		double minDepth = -8000.0;
+//		double maxDepth = -5000.0;
+//		double minDepth = -12000.0; 
+//		double maxDepth = -10000.0;
+		double minDepth = -4000.0; 
+		double maxDepth = -2000.0;
 		System.out.println("Find quakes with depth between " + minDepth + " and " + maxDepth);
 
 		ArrayList<QuakeEntry> listDeep = filterByDepth(list, minDepth, maxDepth);
@@ -166,12 +170,16 @@ public class EarthQuakeClient {
 		System.out.println("read data for "+list.size()+" quakes");
 //		String indicator = "end";
 //		String phrase = "California";
-//		String indicator = "any";
-//		String phrase = "Can";		
+		String indicator = "any";
+		String phrase = "Can";		
 //		String indicator = "start";
 //		String phrase = "Explosion";
-		String indicator = "any";
-		String phrase = "Creek";
+//		String indicator = "any";
+//		String phrase = "Creek";
+//		String indicator = "start";
+//		String phrase = "Quarry Blast";		
+//		String indicator = "end";
+//		String phrase = "Alaska";
 		ArrayList<QuakeEntry> listCalfornia = filterByPhrase(list, indicator , phrase);
 		for (QuakeEntry qe :  listCalfornia) {
 			System.out.println(qe);

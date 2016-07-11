@@ -27,7 +27,7 @@ public class EarthQuakeClient2Test {
 	}
 
 	@Test
-	public void test() {
+	public void quakesWithFilterTest() {
 		eq.quakesWithFilter(); 
 	}
 

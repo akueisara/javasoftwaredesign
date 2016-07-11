@@ -12,8 +12,10 @@ public class LargestQuakes {
 		System.out.println("read data for "+list.size());
 		//int index = indexOfLargest(list);
 		//System.out.println(list.get(index));
-		ArrayList<QuakeEntry> large = getLargest(list,5);
+//		ArrayList<QuakeEntry> large = getLargest(list,5);
 //		ArrayList<QuakeEntry> large = getLargest(list,3);
+//		ArrayList<QuakeEntry> large = getLargest(list,20);
+		ArrayList<QuakeEntry> large = getLargest(list,50);
 		for(int k=0; k < large.size(); k++){
 			QuakeEntry entry = large.get(k);
 			System.out.println(entry);
