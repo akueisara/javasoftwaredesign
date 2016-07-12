@@ -1,5 +1,13 @@
 package assignment.week3;
 
+/**
+ * Generating Random Text
+ * Assignment 1: MarkovZero and MarkovOne
+ * 
+ * @author Kuei
+ * @version July 11, 2016
+ */
+
 import java.util.ArrayList;
 
 import edu.duke.FileResource;
