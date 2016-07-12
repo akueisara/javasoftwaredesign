@@ -38,3 +38,12 @@ Assignments for Java Programming: Principles of Software Design on Coursera
 <code>TitleAndDepthComparator.java</code> <code>DifferentSorters.java</code> <code>DifferentSortersTest.java</code>
 #### Assignment 3: Last Word in Title Comparator
 <code>TitleLastAndMagnitudeComparator.java</code> <code>DifferentSorters.java</code> <code>DifferentSortersTest.java</code>
+
+
+## [Week 3](https://github.com/akueisara/java-programming-principles-of-software-design/tree/master/src/assignment/week3)
+
+### Programming Exercise: Generating Random Text
+#### Assignment 1: MarkovZero and MarkovOne
+<code>MarkovOne.java</code> <code>MarkovOneTest.java</code> <code>MarkovRunner.java</code> <code>MarkovRunnerTest.java</code> <code>Tester.java</code> <code>TesterTest.java</code> 
+#### Assignment 2: MarkovFour and MarkovModel
+<code>MarkovTwo.java</code> <code>MarkovFour.java</code> <code>MarkovRunner.java</code> <code>MarkovRunnerTest.java</code> <code>MarkovModel.java</code>
