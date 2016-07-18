@@ -1,15 +1,18 @@
 package assignment.week3;
 
 /**
- * Write a description of interface IMarkovModel here.
+ * Interface and Abstract Class
+ * Assignment 2: AbstractMarkovModel Abstract Class
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Kuei
+ * @version July 17, 2016
  */
 
 public interface IMarkovModel {
     public void setTraining(String text);
     
     public String getRandomText(int numChars);
+    
+    public void setRandom(int seed); 
     
 }

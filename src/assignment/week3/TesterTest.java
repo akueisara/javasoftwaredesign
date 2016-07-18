@@ -9,8 +9,6 @@ package assignment.week3;
  * @version July 11, 2016
  */
 
-import static org.junit.Assert.*;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

@@ -4,39 +4,46 @@ package assignment.week3;
  * Generating Random Text
  * Assignment 2: MarkovFour and MarkovModel
  * 
+ * Interface and Abstract Class
+ * Assignment 1: IMarkovModel Interface
+ * Assignment 2: AbstractMarkovModel Abstract Class
+ * 
  * @author Kuei
  * @version July 11, 2016
  */
 
+
+
 import java.util.ArrayList;
 import java.util.Random;
 
-public class MarkovFour {
-	private String myText;
-	private Random myRandom;
+//public class MarkovFour implements IMarkovModel {
+public class MarkovFour extends AbstractMarkovModel {
+//	private String myText;
+//	private Random myRandom;
 	
-	public MarkovFour() {
-		myRandom = new Random();
-	}
+//	public MarkovFour() {
+//		myRandom = new Random();
+//	}
+//	
+//	public void setRandom(int seed){
+//		myRandom = new Random(seed);
+//	}
+//	
+//	public void setTraining(String s){
+//		myText = s.trim();
+//	}
 	
-	public void setRandom(int seed){
-		myRandom = new Random(seed);
-	}
-	
-	public void setTraining(String s){
-		myText = s.trim();
-	}
-	
-	public ArrayList<String> getFollows(String key) {
-		int len = key.length();
-		ArrayList<String> result = new ArrayList<String>();
-		for(int i=0;i<myText.length()-len;i++) {
-			if (key.equals(myText.substring(i, i+len))){
-				result.add(myText.substring(i+len, i+len+1));
-			}
-		}
-		return result;
-	}
+//	public ArrayList<String> getFollows(String key) {
+//		int len = key.length();
+//		ArrayList<String> result = new ArrayList<String>();
+//		for(int i=0;i<myText.length()-len;i++) {
+//			if (key.equals(myText.substring(i, i+len))){
+//				result.add(myText.substring(i+len, i+len+1));
+//			}
+//		}
+//		return result;
+//	}
 	
 	public String getRandomText(int numChars){
 		if (myText == null) {
@@ -57,5 +64,10 @@ public class MarkovFour {
 			key = key.substring(1) + next;
 		}
 		return sb.toString();
+	}
+	
+	@Override
+	public String toString(){
+		return String.format("MarkovModel of order %d",4);
 	}
 }

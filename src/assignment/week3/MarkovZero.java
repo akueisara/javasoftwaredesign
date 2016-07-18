@@ -1,29 +1,32 @@
 package assignment.week3;
 
 /**
- * Write a description of class MarkovZero here.
+ * Interface and Abstract Class
+ * Assignment 1: IMarkovModel Interface
+ * Assignment 2: AbstractMarkovModel Abstract Class
  * 
- * @author Duke Software
- * @version 1.0
+ * @author Kuei
+ * @version July 17, 2016
  */
 
 import java.util.Random;
 
-public class MarkovZero {
-    private String myText;
-	private Random myRandom;
+//public class MarkovZero implements IMarkovModel {
+public class MarkovZero extends AbstractMarkovModel {
+//    private String myText;
+//	private Random myRandom;
 	
-	public MarkovZero() {
-		myRandom = new Random();
-	}
-	
-	public void setRandom(int seed){
-		myRandom = new Random(seed);
-	}
-	
-	public void setTraining(String s){
-		myText = s.trim();
-	}
+//	public MarkovZero() {
+//		myRandom = new Random();
+//	}
+//	
+//	public void setRandom(int seed){
+//		myRandom = new Random(seed);
+//	}
+//	
+//	public void setTraining(String s){
+//		myText = s.trim();
+//	}
 	
 	public String getRandomText(int numChars){
 		if (myText == null){
@@ -36,5 +39,10 @@ public class MarkovZero {
 		}
 		
 		return sb.toString();
+	}
+	
+	@Override
+	public String toString(){
+		return String.format("MarkovModel of order %d",0);
 	}
 }

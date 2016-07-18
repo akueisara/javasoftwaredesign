@@ -45,6 +45,4 @@ public class MarkovRunnerTest {
 	public void runMarkovModelTest() {
 		mr.runMarkovModel();
 	}
-	 
-
 }
