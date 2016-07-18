@@ -32,3 +32,7 @@ Assignments for Java Programming: Principles of Software Design on Coursera
 ### Programming Exercise: Generating Random Text
 #### Assignment 1: MarkovZero and MarkovOne
 #### Assignment 2: MarkovFour and MarkovModel
+### Programming Exercise: Interface and Abstract Class
+#### Assignment 1: IMarkovModel Interface
+#### Assignment 2: AbstractMarkovModel Abstract Class
+#### Assignment 3: HashMap for Efficiency
