@@ -5,7 +5,7 @@ Assignments for Java Programming: Principles of Software Design on Coursera
 
 ### Programming Exercise: Searching Earthquake Data
 #### Assignment 1: Filtering by Magnitude and Distance 
-#### Assignment 2: Filtering by Depth>
+#### Assignment 2: Filtering by Depth
 #### Assignment 3: Filtering by Phrase in Title
 #### Assignment 4: Finding the Closest Earthquakes to a Location
 #### Assignment 5: Finding the Largest Magnitude Earthquakes
