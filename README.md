@@ -36,3 +36,6 @@ Assignments for Java Programming: Principles of Software Design on Coursera
 #### Assignment 1: IMarkovModel Interface
 #### Assignment 2: AbstractMarkovModel Abstract Class
 #### Assignment 3: HashMap for Efficiency
+### Programming Exercise: Word N-Grams
+#### Assignment 1: Generating Random Words with Prediction
+#### Assignment 2: MarkovWordTwo
