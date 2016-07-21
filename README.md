@@ -39,3 +39,7 @@ Assignments for Java Programming: Principles of Software Design on Coursera
 ### Programming Exercise: Word N-Grams
 #### Assignment 1: Generating Random Words with Prediction
 #### Assignment 2: MarkovWordTwo
+### Programming Exercise: WordGram Class
+#### Assignment 1: Complete WordGram
+#### Assignment 2: MarkovWord with WordGram
+#### Assignment 3: EfficientMarkovWord with WordGram
