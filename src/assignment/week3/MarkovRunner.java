@@ -9,6 +9,10 @@ package assignment.week3;
  * Assignment 1: Generating Random Words with Prediction
  * Assignment 2: MarkovWordTwo
  * 
+ * WordGram Class
+ * Assignment 2: MarkovWord with WordGram
+ * Assignment 3: EfficientMarkovWord with WordGram
+ * 
  * @author Kuei
  * @version July 20, 2016
  */
@@ -130,8 +134,51 @@ public class MarkovRunner {
       runModel(markovWord, st, 120, 832);
     }
     
+    public void runMarkovWord() {
+        FileResource fr = new FileResource("data/confucius.txt"); 
+        String st = fr.asString(); 
+        st = st.replace('\n', ' '); 
+//        MarkovWord markovWord = new MarkovWord(3);
+        MarkovWord markovWord = new MarkovWord(5);
+//        runModel(markovWord, st, 120, 643);
+//        runModel(markovWord, st, 120, 621);
+        runModel(markovWord, st, 120, 844);
+    }
     
-	
+    public void testHashMap() {
+//        String st = "this is a test yes this is really a test";
+//    	String st = "this is a test yes this is really a test yes a test this is wow";
+        FileResource fr = new FileResource("data/confucius.txt"); 
+        String st = fr.asString(); 
+        st = st.replace('\n', ' ');
+        EfficientMarkovWord efficientMarkovWord = new EfficientMarkovWord(2);
+//        EfficientMarkovWord efficientMarkovWord = new EfficientMarkovWord(3);
+//        runModel(efficientMarkovWord, st, 120, 42);
+//        runModel(efficientMarkovWord, st, 50, 42);
+//        runModel(efficientMarkovWord, st, 50, 371);
+        runModel(efficientMarkovWord, st, 50, 65);
+    }
+    
+    public void compareMethods(){
+        FileResource fr = new FileResource("data/hawthorne.txt");
+		String st = fr.asString();
+		st = st.replace('\n', ' ');
+		int seed = 42;
+		int size = 100;
+		
+		double startTime = System.nanoTime();
+        MarkovWord mTwo = new MarkovWord(2);
+        runModel(mTwo, st, size, seed);
+        double endTime = System.nanoTime();
+        System.out.println("The running time of MarkovWord is " + (endTime-startTime)/ 1000000000.0 + " seconds");
+		
+        startTime = System.nanoTime();
+		EfficientMarkovWord emw = new EfficientMarkovWord(2);
+        runModel(emw, st, size, seed);
+        endTime = System.nanoTime();
+        System.out.println("The running time of EfficientMarkovWord is " + (endTime-startTime)/ 1000000000.0 + " seconds");
+    }
+    
 	private void printOut(String s){
 		String[] words = s.split("\\s+"); // Split a string with any whitespace chars
 		int psize = 0;

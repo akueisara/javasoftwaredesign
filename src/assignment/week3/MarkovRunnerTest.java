@@ -9,6 +9,10 @@ package assignment.week3;
  * Assignment 1: Generating Random Words with Prediction
  * Assignment 2: MarkovWordTwo
  * 
+ * WordGram Class
+ * Assignment 2: MarkovWord with WordGram
+ * Assignment 3: EfficientMarkovWord with WordGram
+ * 
  * @author Kuei
  * @version July 20, 2016
  */
@@ -93,4 +97,20 @@ public class MarkovRunnerTest {
 	public void runMarkovTwoTest() {
 		mr.runMarkovTwo();
 	}
+	
+	@Test
+	public void runMarkovWordTest() {
+		mr.runMarkovWord();
+	}
+	
+	@Test
+	public void testHashMapTest() {
+		mr.testHashMap();
+	}
+	
+	@Test
+	public void compareMethodsTest(){
+		mr.compareMethods();
+	}
+	
 }

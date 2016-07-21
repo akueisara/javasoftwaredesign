@@ -77,13 +77,13 @@ public class MarkovRunnerWithInterface {
         MarkovModel mTwo = new MarkovModel(2);
         runModel(mTwo, st, size, seed);
         double endTime = System.nanoTime();
-        System.out.println("The time of running MarkovModel is " + (endTime-startTime)/ 1000000000.0 + " seconds");
+        System.out.println("The running time of MarkovModel is " + (endTime-startTime)/ 1000000000.0 + " seconds");
 		
         startTime = System.nanoTime();
 		EfficientMarkovModel emm = new EfficientMarkovModel(2);
         runModel(emm, st, size, seed);
         endTime = System.nanoTime();
-        System.out.println("The time of running EfficientMarkovModel is " + (endTime-startTime)/ 1000000000.0 + " seconds");
+        System.out.println("The running time of EfficientMarkovModel is " + (endTime-startTime)/ 1000000000.0 + " seconds");
 	}
 	
 	public void testQuiz() {
